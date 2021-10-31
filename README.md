@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# Plant Watering IoT System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup <a name="front"></a>
+1. Make sure you have npm installed
+2. Clone this repo and open in VS code
+3. In the terminal run `npm install` to install the requirements
+4. Go to the `package.json` and where it says `"proxy":` add your ip address
+5. To run the frontend use `npm start`
 
 ## Available Scripts
 
