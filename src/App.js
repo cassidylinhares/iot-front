@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import server from './constants/api';
 import 'semantic-ui-css/semantic.min.css';
+import { Grid } from 'semantic-ui-react';
 import Card from './Components/PlantCard';
 
 function GetAll() {
@@ -141,10 +142,17 @@ function Remove() {
 function App() {
   return (
     <div className="App">
-      <Insert/>
-      <Card title="Meter 1" id='plant1'/>
       <br/>
-      <Card title="Meter 2" id='plant2'/>
+      <Grid columns='equal'>
+        <Grid.Row centered verticalAlign={'middle'}>
+          <Grid.Column>
+            <Card title="Meter 1" id='plant1'/>
+          </Grid.Column>
+          <Grid.Column>
+            <Card title="Meter 2" id='plant2'/>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </div>
   );
 }
