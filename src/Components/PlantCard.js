@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import server, {plantValues} from '../constants/api';
-import { Card, Image, Dropdown, Modal, Message } from 'semantic-ui-react';
+import { Card, Image, Dropdown, Message } from 'semantic-ui-react';
 
 const PlantCard = ({title, id}) => {
     const [data, setData] = useState({});
@@ -23,17 +23,13 @@ const PlantCard = ({title, id}) => {
         .catch(err => console.error(err))
     }
 
-    const alertBox = () => {
-        alert(`${title} needs watering`)
-        return (<div></div>);
-    }
-
     useEffect(() => {
         setInterval(()=>{
-            axios.get(server.base + server.getRecent(id))
+            //get recents
+            axios.get(server.base + server.getRecents(id))
             .then(res =>setData(res.data[0]))
             .catch(err => console.error(err))
-        }, 20000);
+        }, 60000);
     },[id]);
 
     return (

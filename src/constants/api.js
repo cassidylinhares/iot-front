@@ -1,7 +1,8 @@
 const server = {
-    base: "http://192.168.0.33:8000/",
+    base: "http://192.168.0.33:8000/",//"https://plantpal-whv3b.ondigitalocean.app/",
     getAll: (plantId)=>`getMoistureLevels/${plantId}/`,
-    getRecent: (plantId)=>`getRecentMoistureLevels/${plantId}/`,
+    getRecent: 'getRecentMoistureLevel/',
+    getRecents: (plantId)=>`getRecentMoistureLevels/${plantId}/`,
     getOne: (id)=>`getMoistureLevel/${id}/`,
     create: 'insertMoistureLevel/',
     update: (id)=>`updateMoistureLevel/${id}/`,
