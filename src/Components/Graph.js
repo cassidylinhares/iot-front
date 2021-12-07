@@ -11,9 +11,9 @@ const Graph = ({title, id}) => {
         setInterval(()=>{
             //get recents
             axios.get(server.base + server.getRecents(id))
-            .then(res =>setData(res.data.reverse()))
+            .then(res =>setData(res.data.slice(0,14)))
             .catch(err => console.error(err));
-        }, 20000);
+        }, 60000);
     },[id]);
 
     return (
