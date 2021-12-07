@@ -1,5 +1,5 @@
 const server = {
-    base: "http://192.168.0.33:8000/",//"https://plantpal-whv3b.ondigitalocean.app/",
+    base: "https://plantpal-whv3b.ondigitalocean.app/",//"http://192.168.0.33:8000/"
     getPlants: 'getPlants/',
     getAll: (plantId)=>`getMoistureLevels/${plantId}/`,
     getRecent: (plantId)=>`getMoistureLevel/${plantId}/`,
